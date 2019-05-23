@@ -1,15 +1,15 @@
-# Implementation of Blockchain-based Secure Energy Trading System using ARM TrustZone
+# Secure Klaytn-based Energy Trading System using ARM TrustZone
 
-## Why do we make this?
+## Introduction
 
-While research and development is prolific in smart grid, there are only few research in security issues in energy transaction. In this project, we identify four security issues in smart grid and limitations of current P2P energy platforms - Trust, Communication Security, Device security, Privacy. We propose to solve security issues using blockchain technology, Transport Layer Security (TLS) cryptographic protocol and hardware support from ARM Trustzone. We demonstrate an implementation of a such smart grid node, based on Klaytn smart contract using a Samsung ARTIK Internet-of-Things (IoT) platform, a solar panel, a rechargeable battery, and a smartphone.
+ Due to the emergence of people who can generate their own energy from Renewable Energy Sources (RESs), and the problems of central management overhead, peer-to-peer (P2P) energy trading has become a promising technology in smart grids. Booming of blockchain technology has boosted the research and development of P2P energy trading. At the same time, in the absence of a central authority, the critical issue of providing security for transactions arises in decentralized systems. While research and development pertaining to the smart grid is prolific, we have observed that research into security issues in energy transactions is still limited. In this paper, we identify four security issues in the smart grid, and identify some limitations of current P2P energy platforms. We propose to solve these security issues using blockchain technology, Transport Layer Security (TLS) cryptographic protocols and hardware support from ARM Trustzone. We demonstrate an implementation of a  smart grid node based on a Klaytn smart contract using a Samsung ARTIK Internet-of-Things (IoT) platform, a solar panel, a rechargeable battery, and a smartphone.
 
-## Four Security Issues
+## Security Issues
 
-- Trust : The participant in the transaction should be able to verify self and the user in opposite side of transaction.
-- Communication Security : Safe communication sould be available.
-- Device Security : Device should be protected.
-- Privacy : We should prevent from disclosing the use pattern of electricity, specific user’s behavior could be revealed.
+ We investigate security issues in P2P Energy Trading Platforms and divide them into four categories: Device Security, Network, Trade System, and Data Security. The possible security issues in P2P energy trading platforms are collected from existing researches.
+
+![security_issues_p2p_energy_trading](https://github.com/klaytn-hackathon/Evlock/blob/master/pictures/security_issues.png)
+
 
 ## Software Architecture
 
