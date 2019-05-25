@@ -17,7 +17,7 @@
 <div markdown="1">
 
 |Number|Description|Goal|
-|--|--|--|
+|-|----|----|
 |1|This attack causes the value change of some registers that hold calibration parameters to make erroneous measurement adjustments during sensor's operation.|In the case of a Buyer, hackers adjust the current measurement sensor so that even if the hackers send less current, the buyer feels as if he or she has received more current. For Sellers, hackers lower the current measurement sensor to make them send more current to the hackers. It could be also performed for terror purpose.|
 |2|This is an attack that physically damages or adjusts the sensor to cause the wrong recognition of power sales/purchase information.|In the case of a Buyer, hackers adjust the current measurement sensor so that even if the hackers send less current, the buyer feels as if he or she has received more current. For Sellers, hackers lower the current measurement sensor to make them send more current to the hackers. It could be also performed for terror purpose.|
 |3|This attack makes the content of the energy accumulation registers to be removed. |Each time the amount of energy is read, it is executed to make it appear that little energy is stored and cannot be sold. An erroneous behavior also could be found.|
