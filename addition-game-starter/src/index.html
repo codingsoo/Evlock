@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <title>Klaytn Addition Game</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-md-offset-2">
+        <h1 class="text-center">클레이튼(Klaytn)</h1>
+        <h3 class="text-center">속전속결 덧셈 게임</h3>
+        <h3 class="text-center">
+          <code>3초안에 맞출 시 0.1 KLAY 지급 이벤트</code>
+          <button type="button"
+                  class="btn btn-info pull-right"
+                  id="login"
+                  data-toggle="modal"
+                  data-target="#loginModal">
+                  로그인
+          </button>
+          <button type="button"
+                  class="btn btn-info pull-right"
+                  id="logout"
+                  style="display: none;"
+                  onclick="App.handleLogout()">
+                  로그아웃
+          </button>
+        </h3>
+        <div class="text-center" id="address"></div>
+        <hr />
+      </div>
+    </div>
+  </div>  
+  <div class="modal fade" tabindex="-1" role="dialog" id="loginModal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="keystore">Keystore</label>
+          <input type="file" id="Keystore" onchange="App.handleImport()">
+        </div>
+        <div class="form-group">
+          <label for="input-password">비밀번호</label>
+          <input type="password" class="form-control" id="input-password" onchange="App.handlePassword()">
+          <p class="help-block" id="message"></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="submit" onclick="App.handleLogin()">제출</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+
+</html>
+
+<style>
+  .yellow-box {
+    background-color: #FFC;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 500px;
+    font-size: 80px;
+  }
+
+  #timer {
+    font-size: 80px;
+    color: red;
+  }
+
+  @keyframes spinner-line-fade-more {
+    0%, 100% {
+      opacity: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes spinner-line-fade-quick {
+    0%, 39%, 100% {
+      opacity: 0.25;
+    }
+    40% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes spinner-line-fade-default {
+    0%, 100% {
+      opacity: 0.22;
+    }
+    1% {
+      opacity: 1;
+    }
+  }
+</style>
