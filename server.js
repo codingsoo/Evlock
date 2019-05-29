@@ -17,7 +17,7 @@ const cav = new Caver(config.rpcURL);
 
 var myContract = new cav.klay.Contract(JSON.parse(EV_abi),EV_address);			
 
-console.log("!!!");
+console.log("Now Sever is running...");
 
 var app = http.createServer(function(request,response){
     var _url = request.url;
@@ -26,20 +26,21 @@ var app = http.createServer(function(request,response){
     
     if(pathname == '/info'){ // GET info
         /* Call SmartContract's Data and write JSON */
-        var info = {
+        var sellerList = {
             info: []
 		};
-		fs.readFile(`./temp.json`, 'utf8', function(err, description){
-			response.writeHead(200);
-			response.end(description);
-		});
 
-    /* {"id": "0x12345","price": "10","Amount": "2000","Credit": "8"} */
+     /* Get Seller List Info from Smart Contract */
+     /*
+          for ($SellerListNumber) {
+            sellerList.info.push({"id": "0x12345","price": "10","Amount": "2000","Credit": "8"} );
+        } */
+
         /* response.writeHead(200); */
-     /* response.end($JSON FILE); */
+        /* response.end(sellerList); */
 
 	} else if(pathname == '/sell'){ // GET by query
-		/* http://175.192.140.18/sell?id=$(SellAmount)&$(SellPrice) */
+		/* Query URL Example) http://175.192.140.18/sell?id=$(SellAmount)&$(SellPrice) */
 		var urlData = queryData.id.split('&');
 		var sellAmount = urlData[0];
 		var price = urlData[1];
@@ -55,17 +56,19 @@ var app = http.createServer(function(request,response){
 		var sellIdx = urlData[0];
 		var buyAmount = urlData[1];
 
-//		for ( i < $credit) {
-
 		/* Call SmartContract's buyEV(uint256 _seq, uint256 _amount) */
 
-		/* Call GPIO */
+		/* call gpio */
 
-		/* Check and If failed translate.. call refund */
+        /* Check each Electricity */
+		/* for ( i < $credit) {
+            sellerSent = Check Seller's Smart Meters
+            buyerRecieve = Check Receiver's Smart Meters
 
-//        }
-		/* Succeed or Failed */
-
+            if ( sellerSent / precision != buyerRecieve / precision ) {
+                Call SmartContract's Refund Function
+            }
+       }*/
         response.writeHead(200);
 
     } else {
