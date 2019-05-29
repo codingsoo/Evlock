@@ -1,0 +1,23 @@
+{
+  "name": "klaytn-evlock",
+  "version": "1.0.0",
+  "description": "A secure peer-to-peer energy trading platform",
+  "main": "app.js",
+  "repository": "https://github.com/klaytn-hackathon/Evlock.git",
+  "author": "Sangyeol Park <phenolic94@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "caver-js": "^0.8.5-3",
+    "connect-privkey-to-provider": "^0.0.3",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.0",
+    "express-asyncify": "^1.0.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.0"
+  },
+  "scripts": {
+    "start": "nodemon app.js",
+    "compile": "truffle compile",
+    "deploy": "truffle deploy --compile-all --reset --network klaytn"
+  }
+}

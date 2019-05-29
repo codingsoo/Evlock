@@ -1,18 +1,22 @@
-// truffle.js config for klaytn.
+const PrivateKeyConnector = require('connect-privkey-to-provider');
+require('dotenv').config();
 
-const PrivateKeyConnector = require('connect-privkey-to-provider')
-const NETWORK_ID = '1001'
-const GASLIMIT = '20000000'
-const URL = `https://api.baobab.klaytn.net:8651`
-const PRIVATE_KEY = '$PRIVATE_KEY'
+const NETWORK_ID = '1001',
+  GAS_LIMIT = '20000000',
+  URL = 'https://api.baobab.klaytn.net:8651';
 
 module.exports = {
-  networks: {  
+  networks: {
     klaytn: {
-      provider: new PrivateKeyConnector(PRIVATE_KEY, URL),
+      provider: new PrivateKeyConnector(process.env.PRIVATE_KEY, URL),
       network_id: NETWORK_ID,
-      gas: GASLIMIT,
+      gas: GAS_LIMIT,
       gasPrice: null,
     }
   },
-}
+  compilers: {
+    solc: {
+      version: "0.4.24"
+    }
+  }
+};
