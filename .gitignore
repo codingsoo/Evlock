@@ -56,3 +56,4 @@ jspm_packages/
 
 # idea configuration file
 .idea/
+build/
