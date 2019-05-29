@@ -9,7 +9,7 @@ const app = asyncify(express());
 const port = process.env.PORT || 5000;
 
 app.get('/', async function(req, res) {
-  res.end(await klay.getContactNmae() + ' healthy');
+  res.end(`${await klay.getContactNmae()} healthy`);
 });
 
 app.get('/info', function(req, res) {
