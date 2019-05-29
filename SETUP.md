@@ -8,14 +8,17 @@
 
 ### truffle.js
 
-이거도 알아서
+```bash
+npm install -g truffle
+```
 
-## install dependencies
+## Install dependencies
 
 ```bash
 $ yarn install
 ```
-## setup .env
+
+## Setup environment variables
 
 .env 파일을 하나 만들어야 하며 개인 키와 컨트렉트 주소가 들어있어야 함. 형식은 아래 참고.
 
@@ -41,7 +44,7 @@ $ yarn deploy
 ```
 
 compile reset도 같이 하며 주소를 `.env`에 저장함.  
-현재 `Truffle v5.0.8`에서 동작하지 않음. https://ide.klaytn.com에서 deploy 필요. 
+현재 `Truffle v5.0.8`에서 동작하지 않음. https://ide.klaytn.com에서 deploy 필요.
 
 ## start server
 
