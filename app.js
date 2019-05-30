@@ -12,11 +12,6 @@ app.get('/', async function(req, res) {
   res.end(`${await klay.getContactNmae()} is healthy`);
 });
 
-app.get('/info', function(req, res) {
-  /* Get Seller List Info from Smart Contract */
-  res.end('todo');
-});
-
 app.get('/create_token/:value', async function(req, res) {
   await klay.sellEV(req.params.value);
   res.send('complete your request.')
