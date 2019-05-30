@@ -9,7 +9,7 @@ const app = asyncify(express());
 const port = process.env.PORT || 5000;
 
 app.get('/', async function(req, res) {
-  res.end(`${await klay.getContactNmae()} healthy`);
+  res.end(`${await klay.getContactNmae()} is healthy`);
 });
 
 app.get('/info', function(req, res) {
@@ -17,35 +17,26 @@ app.get('/info', function(req, res) {
   res.end('todo');
 });
 
-app.get('/sell', function(req, res) {
-  const amount = req.query.amount;
-  const price = req.query.price;
-  /* Call smartContract's registerSelling(uint256 _amount, uint256 _price) */
+app.get('/create_token/:value', async function(req, res) {
+  await klay.sellEV(req.params.value);
+  res.send('complete your request.')
 });
 
-app.get('/buy', function(req, res) {
-  const amount = req.query.seller;
-  const price = req.query.amount;
+app.get('/balance/:address', async function(req, res) {
+  res.end(`${req.params.address} balance: ${await klay.checkBalance(req.params.address)} EVTT`);
+});
 
-  /* Call SmartContract's buyEV(uint256 _seq, uint256 _amount) */
+app.get('/sell/:amount/price/:price', async function(req, res) {
+  await klay.sellEV(req.params.amount, req.params.price);
+  res.send('complete your request.')
+});
 
-  /* call gpio */
-  /* Check each Electricity */
-  /* for ( i < $credit) {
-          sellerSent = Check Seller's Smart Meters
-          buyerRecieve = Check Receiver's Smart Meters
-
-          if ( sellerSent / precision != buyerRecieve / precision ) {
-              Call SmartContract's Refund Function
-          }
-     }*/
+app.get('/buy/:seller/amount/:amount', async function(req, res) {
+  await klay.buyEV(req.params.seller, req.params.amount);
+  res.send('complete your request.')
 });
 
 app.use(logger('dev'));
 app.listen(port, function() {
   console.log('server listening on port', port);
 });
-
-function cb(res) {
-  res.send('complete your request.')
-}
