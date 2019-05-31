@@ -5,7 +5,7 @@
   "main": "app.js",
   "repository": "https://github.com/klaytn-hackathon/Evlock.git",
   "author": "Sangyeol Park <phenolic94@gmail.com>",
-  "license": "MIT",
+  "license": "LGPL-3.0",
   "dependencies": {
     "caver-js": "^0.8.5-3",
     "connect-privkey-to-provider": "^0.0.3",
