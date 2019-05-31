@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="list"
+        android:background="#81BEF7"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/json_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_refresh"
+        android:text="show list"
+        android:gravity="center"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

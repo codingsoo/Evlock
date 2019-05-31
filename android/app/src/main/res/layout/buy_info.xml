@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Transaction"
+        android:gravity="center"
+        android:textSize="35dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/amount_view"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="amount :"
+            android:textSize="28dp" />
+
+        <EditText
+            android:id="@+id/amount_editText"
+            android:layout_width="100dp"
+            android:layout_height="60dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="#81BEF7"
+            android:text="cancel"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:layout_marginRight="5dp"/>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="ok"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:background="#81BEF7"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+</LinearLayout>

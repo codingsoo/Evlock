@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/row_list_id"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:text="id"/>
+
+    <TextView
+        android:id="@+id/row_list_price"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/row_list_id"
+        android:gravity="center"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:text="price"/>
+
+    <TextView
+        android:id="@+id/row_list_amount"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/row_list_price"
+        android:gravity="center"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:text="amount"/>
+
+    <TextView
+        android:id="@+id/row_list_credit"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/row_list_amount"
+        android:gravity="center"
+        android:text="credit"
+        android:textAppearance="?android:textAppearanceLarge"/>
+</RelativeLayout>

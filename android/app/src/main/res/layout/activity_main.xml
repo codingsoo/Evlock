@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="371dp"
+        android:layout_height="181dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:src="@drawable/logo2" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="buy"
+            android:textSize="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#81BEF7"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:id="@+id/btn_sell"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="sell"
+            android:textSize="20dp"
+            android:background="#81BEF7"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
