@@ -9,6 +9,7 @@ contract EVlock is EIP20Interface {
      
     mapping (address => uint256) public balances;
     mapping (address => mapping (address => uint256)) public allowed;
+    mapping (address => mapping (address => uint256)) public credit;
     
     mapping (uint256 => address) public user;
     mapping (address => uint256) public seqOfUser;
@@ -28,6 +29,7 @@ contract EVlock is EIP20Interface {
     string public symbol;                   // EVT
     address public owner;                   // Contract PUblisher
     uint256 seq = 0;
+    uint256 credit = 0;
     
     uint256 donatedEV = 0;
     
@@ -100,6 +102,7 @@ contract EVlock is EIP20Interface {
         user[seq] = msg.sender;
         seqOfUser[msg.sender] = seq;
         seq = seq.add(1);
+        credit = credit[seq].add(1);
         return true;
     }
 
@@ -140,8 +143,8 @@ contract EVlock is EIP20Interface {
     }
 
     function addCredit(address _from, address _to) public{
-        succeedTrade[_from].add(1);
-        succeedTrade[_to].add(1);
+        credit[_from].add(1);
+        credit[_to].add(1);
     }
 
     function refund(address _from, address _to, uint256 _value) public returns (bool succeed) {
