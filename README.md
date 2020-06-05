@@ -2,8 +2,8 @@
 
 ## News
 
-This project received 1st award from Line Blockchain Competition!
-Korea News: https://plus.hankyung.com/apps/newsinside.view?aid=201901287542A&category=AA010&sns=y
+- This project received 1st award from Line Blockchain Competition!
+- Korea News: https://plus.hankyung.com/apps/newsinside.view?aid=201901287542A&category=AA010&sns=y
 
 ## Abstract
 
