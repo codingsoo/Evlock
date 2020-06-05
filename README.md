@@ -1,5 +1,9 @@
 # Evlock - A secure Klaytn-based energy trading system
 
+## News
+
+This project received 1st award from Line Blockchain Competition!
+
 ## Abstract
 
  Due to the emergence of people who can generate their own energy from Renewable Energy Sources (RESs), and the problems of central management overhead, peer-to-peer (P2P) energy trading has become a promising technology in smart grids. Blockchain technology has become popular in P2P transactions because of its disintermediation, transparency, tamper-proof transactions, and ensuring privacy and anonymity features [1, 2]. According to a report by Eurelectric in 2017, the Union of the electricity industry, more than 1000 projects are currently using Ethereum [3]. At the same time, in the absence of a central authority, the critical issue of providing security for transactions arises in decentralized systems. While research and development pertaining to the smart grid is prolific, we have observed that research into security issues in energy transactions is still limited. In this project, we identify 34 security issues in the blockchain-based P2P energy transactions and show the security limitations and speed limitations of other projects. We propose to solve these issues using blockchain technology, Transport Layer Security (TLS) cryptographic protocols, sensor checking modules, and hardware support from ARM TrustZone. We demonstrate an implementation of a smart grid node based on a Klaytn smart contract using a Samsung ARTIK Internet-of-Things (IoT) platform, a solar panel, a rechargeable battery, and a smartphone. The business model is also described in the last part of our paper.
