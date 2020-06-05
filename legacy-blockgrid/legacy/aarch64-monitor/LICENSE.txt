@@ -1,0 +1,222 @@
+END USER LICENCE AGREEMENT FOR SECURE MONITOR EXAMPLE CODE (ARMv8-A) 
+
+THIS END USER LICENCE AGREEMENT ("LICENCE") IS A LEGAL AGREEMENT 
+BETWEEN YOU (EITHER A SINGLE INDIVIDUAL, OR SINGLE LEGAL ENTITY) 
+("YOU") AND ARM LIMITED ("ARM") FOR THE USE OF THE SOFTWARE 
+ACCOMPANYING THIS LICENCE. ARM IS ONLY WILLING TO LICENSE THE SOFTWARE 
+TO YOU ON CONDITION THAT YOU ACCEPT ALL OF THE TERMS IN THIS LICENCE. BY 
+CLICKING "I AGREE" OR BY INSTALLING OR OTHERWISE USING OR COPYING 
+THE SOFTWARE YOU INDICATE THAT YOU AGREE TO BE BOUND BY ALL OF THE TERMS 
+OF THIS LICENCE. IF YOU DO NOT AGREE TO THE TERMS OF THIS LICENCE, ARM 
+IS UNWILLING TO LICENSE THE SOFTWARE TO YOU AND YOU MAY NOT INSTALL, USE 
+OR COPY THE SOFTWARE, AND YOU SHOULD PROMPTLY RETURN THE SOFTWARE TO 
+YOUR SUPPLIER. 
+
+"ARMv8-A Architecture" means ARM's proprietary ARMv8-A application 
+architecture profile associated with a 64-bit execution model, 
+instruction set, exception model, memory model and debug support. 
+
+"ARM Compliant Product" means an integrated circuit which 
+incorporates technology licensed from ARM and may or may not include a 
+CPU provided that where such integrated circuit incorporates a CPU then 
+such CPU is either: (i) a CPU manufactured under licence from ARM; or 
+(ii) a CPU other than a CPU manufactured under licence from ARM, 
+provided that such CPU is not: (a) substantially compliant with the ARM 
+instruction sets licensed by ARM from time to time; or (b) marketed as 
+being compliant with the ARM instruction sets licensed by ARM from time 
+to time. 
+
+"SMC Software Implementation" means Your implementation of the 
+Software for use in a Trusted Execution Environment using an ARM 
+Compliant Product compatible with the ARMv8-A Architecture. 
+
+"Software" means the source code of the secure monitor example code 
+and all accompanying software, example application code and data, and 
+any updates, patches and modifications ARM may make available to You 
+under the terms of this Licence. 
+
+"Trusted Execution Environment" means a application processor based 
+security solution that provides a separate execution environment for use 
+by one or more trusted applications. 
+
+
+1. LICENCE GRANTS. 
+
+ARM hereby grants to You, subject to the terms and conditions of this 
+Licence, a revocable, non-exclusive, non-transferable, perpetual, 
+worldwide licence, to use, copy and modify the Software solely for: 
+
+(i) internal use of the source code of the Software solely for 
+development by You of the SMC Software Implementation for execution on 
+ARM Compliant Products compatible with the ARMv8-A Architecture; and 
+
+(ii) distribution of the SMC Software Implementation created under 
+Clause 1(i) in binary form only to the public for execution on ARM 
+Compliant Products compatible with the ARMv8-A Architecture. 
+
+
+2. RESTRICTIONS ON USE OF THE SOFTWARE. 
+
+PERMITTED USERS: The Software may be used only by Your employees, 
+employees of Your wholly-owned subsidiaries, Your contractors and 
+contractors of Your wholly owned subsidiaries, provided that such 
+contractors access the Software using Your IT systems. You hereby agree 
+to be liable to ARM for the acts and omissions of Your wholly owned 
+subsidiaries, Your contractors and contractors of Your wholly-owned 
+subsidiaries. Only contractors who access the Software using Your IT 
+systems are permitted to use the Software. Except as expressly permitted 
+by this Clause, You shall not allow third parties to use the Software 
+unless ARM specifically agrees otherwise with You on a case-by-case 
+basis. 
+
+REMOTE USE: The Software shall only be used onsite at Your premises, 
+except when used offsite by an employee (but not a contractor) of Yours, 
+on a portable computer, in accordance with the paragraph above, as part 
+of his or her normal work activities, and only for Your benefit. 
+
+RESULTS: You shall treat all results of Your use of the Software, 
+including but not limited to benchmarking data, ("Results"), as 
+confidential information in accordance with Clause 4 below and you shall 
+not disclose such Results to any third party without ARM's express 
+written consent. Notwithstanding the foregoing, ARM agrees not to 
+withhold consent for reasonable requests to make such disclosures, 
+provided that such disclosures are under appropriate confidentiality 
+obligations. 
+
+COPYING: You shall not use or copy the Software except as expressly 
+authorised in this Licence. You may make one additional copy of the 
+delivered Software media or image for backup or archival purposes. 
+
+COPYRIGHT AND RESERVATION OF RIGHTS: The Software is owned by ARM or its 
+licensors and is protected by copyright and other intellectual property 
+laws and international treaties. The Software is licensed not sold. You 
+acquire no rights to the Software other than as expressly provided by 
+this Licence. You shall not remove from the Software any copyright 
+notice or other notice and shall ensure that any such notice is 
+reproduced in any copies of the whole or any part of the Software made 
+by You or other permitted users. 
+
+
+3. SUPPORT AND MAINTENANCE. 
+
+ARM is not under an obligation to provide support and maintenance, but 
+it may do so at its own discretion. 
+
+
+4. CONFIDENTIALITY. 
+
+You acknowledge that the source code of the Software, any information 
+exchanged in the provision of support and related information contain 
+trade secrets and confidential material, and You agree to maintain them 
+in confidence and apply security measures no less stringent than the 
+measures which You apply to protect Your own like information, but not 
+less than a reasonable degree of care, to prevent their unauthorised 
+disclosure and use. You agree that You shall not use any such 
+information other than for the purpose permitted under the licences 
+granted in this Licence. Subject to any restrictions imposed by 
+applicable law, the period of confidentiality shall be twenty (20) years 
+from the date of disclosure. 
+
+The provisions of this Clause 4 shall not apply to information which: 
+(i) is known to and has been reduced to tangible form by the receiving 
+party prior to its receipt provided that such information is not already 
+subject to any obligations of confidentiality; or (ii) is in the public 
+domain at the time of receipt or later becomes part of the public domain 
+without breach of the confidentiality obligations in this Licence; or 
+(iii) is received from a third party without any breach of any 
+obligation of confidentiality in respect of such information provided 
+that such information is not subject to any continuing obligations of 
+confidentiality. 
+
+
+5. NO WARRANTIES. 
+
+YOU AGREE THAT THE SOFTWARE IS LICENSED "AS IS", AND THAT ARM 
+EXPRESSLY DISCLAIMS ALL REPRESENTATIONS, WARRANTIES, CONDITIONS OR OTHER 
+TERMS, EXPRESS OR IMPLIED OR STATUTORY, INCLUDING WITHOUT LIMITATION THE 
+IMPLIED WARRANTIES OF NON-INFRINGEMENT, SATISFACTORY QUALITY, AND 
+FITNESS FOR A PARTICULAR PURPOSE. 
+
+YOU EXPRESSLY ASSUME ALL LIABILITIES AND RISKS, FOR USE OR OPERATION OF 
+SOFTWARE APPLICATIONS, INCLUDING WITHOUT LIMITATION, SOFTWARE 
+APPLICATIONS DESIGNED OR INTENDED FOR MISSION CRITICAL APPLICATIONS, 
+INCLUDING, BUT NOT LIMITED TO, PACEMAKERS, WEAPONRY, AIRCRAFT 
+NAVIGATION, FACTORY CONTROL SYSTEMS, ETC. SHOULD THE SOFTWARE PROVE 
+DEFECTIVE, YOU ASSUME THE ENTIRE COST OF ALL NECESSARY SERVICING, REPAIR 
+OR CORRECTION. 
+
+
+6. LIMITATION OF LIABILITY. 
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL ARM 
+BE LIABLE FOR ANY INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES 
+(INCLUDING LOSS OF PROFITS) ARISING OUT OF THE USE OR INABILITY TO USE 
+THE SOFTWARE WHETHER BASED ON A CLAIM UNDER CONTRACT, TORT OR OTHER 
+LEGAL THEORY, EVEN IF ARM WAS ADVISED OF THE POSSIBILITY OF SUCH 
+DAMAGES. ARM does not seek to limit or exclude liability for death or 
+personal injury arising from ARM's negligence or ARM's fraud and 
+because some jurisdictions do not permit the exclusion or limitation of 
+liability for consequential or incidental damages the above limitation 
+relating to liability for consequential damages may not apply to You. 
+
+NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED IN THIS LICENCE, THE 
+MAXIMUM LIABILITY OF ARM TO YOU IN AGGREGATE FOR ALL CLAIMS MADE AGAINST 
+ARM IN CONTRACT TORT OR OTHERWISE UNDER OR IN CONNECTION WITH THE 
+SUBJECT MATTER OF THIS LICENCE SHALL NOT EXCEED THE GREATER OF: (I) THE 
+TOTAL OF SUMS PAID BY YOU TO ARM (IF ANY) FOR THIS LICENCE; OR (II) 
+$10.00 USD. THE EXISTENCE OF MORE THAN ONE CLAIM WILL NOT ENLARGE OR 
+EXTEND THE LIMIT. 
+
+
+7. U.S. GOVERNMENT END USERS. 
+
+US Government Restrictions: Use, duplication, reproduction, release, 
+modification, disclosure or transfer of the Software is restricted in 
+accordance with the terms of this Licence. 
+
+
+8. TERM AND TERMINATION. 
+
+This Licence shall remain in force until terminated by You, or by ARM. 
+Without prejudice to any of its other rights if You are in breach of any 
+of the terms and conditions of this Licence then ARM may terminate this 
+Licence immediately upon giving written notice to You. You may terminate 
+this Licence at any time. Upon termination of this Licence by You or by 
+ARM, You shall stop using the Software and confidential information and 
+destroy all copies of the Software and confidential information in Your 
+possession. The provisions of clauses 4, 5, 6, 7, 8, and 9 shall survive 
+termination of this Licence. 
+
+
+9. GENERAL. 
+
+This Licence is governed by English Law. Except where ARM agrees 
+otherwise in: (i) a written contract signed by You and ARM; or (ii) a 
+written contract provided by ARM and accepted by You, this is the only 
+agreement between You and ARM relating to the Software and it may only 
+be modified by written agreement between You and ARM. Except as 
+expressly agreed in writing, this Licence may not be modified by 
+purchase orders, advertising or other representation by any person. If 
+any clause or sentence in this Licence is held by a court of law to be 
+illegal or unenforceable the remaining provisions of this Licence shall 
+not be affected thereby. The failure by ARM to enforce any of the 
+provisions of this Licence, unless waived in writing, shall not 
+constitute a waiver of ARM's rights to enforce such provision or any 
+other provision of this Licence in the future. 
+
+The Software provided under this Licence is subject to U.S. export 
+control laws, including the U.S. Export Administration Act and its 
+associated regulations, and may be subject to export or import 
+regulations in other countries. You agree to comply fully with all laws 
+and regulations of the United States and other countries ("Export 
+Laws") to assure that the Software, is not: (1) exported, directly or 
+indirectly, in violation of Export Laws, either to any countries that 
+are subject to U.S.A. export restrictions or to any end user who has 
+been prohibited from participating in the U.S.A. export transactions by 
+any federal agency of the U.S.A. government; or (2) intended to be used 
+for any purpose prohibited by Export Laws, including, without 
+limitation, nuclear, chemical, or biological weapons proliferation. 
+
+
+ARM contract references: LES-PRE-20262 for Secure Monitor Example Code 
+ARMv8A/end 

@@ -1,0 +1,477 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content="HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
+
+  <title>AArch64 Secure Monitor Example 2013-04 Release Notes</title>
+  <style type="text/css">
+/*<![CDATA[*/
+    body { font-family: sans-serif; }
+    div.section { border-top: solid 1px; }
+    div.toc ol { list-style-type: none; }
+    h1 { color: #0083AB; text-align: center; }
+    dl.manifest dt {font-family: Courier, monospace; }
+    span.mono {font-family: Courier, monospace; }
+  /*]]>*/
+  </style>
+</head>
+
+<body>
+  <h1>AArch64 Secure Monitor Example 2013-04<br />
+  Release Notes</h1>
+
+  <div class="toc">
+    <h2>Contents</h2>
+
+    <ol>
+      <li>
+        <a href="#preface">Preface</a>
+
+        <ol>
+          <li><a href="#proprietary-notice">Proprietary notice</a></li>
+
+          <li><a href="#license-details">License details</a></li>
+        </ol>
+      </li>
+
+      <li>
+        <a href="#release-details">Release details</a>
+
+        <ol>
+          <li><a href="#product-release-status">Product release status</a></li>
+
+          <li><a href="#about">About this release</a></li>
+
+          <li><a href="#deliverables">Deliverables</a></li>
+
+          <li><a href="#functionality-included">Functionality included</a></li>
+
+          <li><a href="#new-features">New features</a></li>
+
+          <li><a href="#known-issues">Known issues</a></li>
+<!--
+          <li><a href="#issues-resolved">Issues resolved since last release</a></li>
+-->
+
+          <li><a href="#test-cases">Test cases and results</a></li>
+<!--
+          <li><a href="#other-info">Other information</a></li>
+-->
+        </ol>
+      </li>
+
+      <li>
+        <a href="#installation">Installation</a>
+
+        <ol>
+          <li><a href="#requirements">Requirements</a></li>
+
+          <li><a href="#installation-instructions">Installation instructions</a></li>
+
+          <li><a href="#build-instructions">Build instructions</a></li>
+
+          <li><a href="#usage">Usage</a></li>
+        </ol>
+      </li>
+<!--
+      <li><a href="#tools">Tools</a></li>
+
+      <li><a href="#operating-systems">Operating systems</a></li>
+-->
+      <li><a href="#support">Support</a></li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2><a name="preface" id="preface">Preface</a></h2>
+
+    <h3><a name="proprietary-notice" id="proprietary-notice">Proprietary notice</a></h3>
+
+    <p>Copyright &copy; 2011-2013, ARM Limited</p>
+
+    <p>All rights reserved.</p>
+
+    <h3><a name="license-details" id="license-details">License details</a></h3>
+
+    <p>The supplied source code and binaries are covered by the ARM End User License Agreement for
+    Secure Monitor Example Code. See the <span class="mono"><a href="LICENSE.txt">LICENSE.txt</a></span> file.</p>
+
+    <h3><a name="product-status" id="product-status">Product status</a></h3>
+
+    <p>ALPHA</p>
+    <p>Alpha is a pre-release status indicating that the deliverable so described has demonstrated restricted functionality
+    in a useful sub set of its target functionality. Though restricted functionality has been demonstrated ARM only makes a
+    limited claim for correct behavior under all cases of reasonably expected use. Nothing is claimed for the behavior of
+    the deliverable outside the restricted functionality. Where documentation or abstracts are included, they are provided
+    for guidance only and consistency is not guaranteed. An Alpha status deliverable is provided to facilitate initial
+    system integration and should only be used for the specific purposes agreed between ARM and the recipient prior to
+    delivery. Alpha status deliverables will normally be a fairly accurate physical and functional representation of that
+    deliverable as it will appear in the final release, at least as regards the restricted functionality. The recipient
+    should consider this position when using this Alpha material supplied. ARM shall not be responsible for direct or
+    consequential damages as a result of encountering any defects in Alpha status material.</p>
+  
+  </div>
+
+  
+  <div class="section">
+    <h2><a name="release-details" id="release-details">Release details</a></h2>
+
+    <h3><a name="product-release-status" id="product-release-status">Product release
+    status</a></h3>
+
+    <p>This is example code and is not intended to be used as is in a product.</p>
+
+    <h3><a name="about" id="about">About the 2013-04 release</a></h3>
+
+    <p>This software release is an example code for a Secure Monitor for ARMv8.</p>
+    
+    <p>This version was validated with the v4.7 release of the AEMv8A RTSM models (see ARM <a  href="http://www.arm.com/products/processors/instruction-set-architectures/armv8-architecture.php">armv8-architecture</a> web page) and has been built
+    and tested using publicly available Linaro GCC toolchains <a href="http://www.linaro.org/engineering/armv8#tab3">Linaro</a>.</p>
+
+    <h3><a name="deliverables" id="deliverables">Deliverables</a></h3>
+
+    <p>This release contains the following file:</p>
+
+    <dl class="manifest">
+      <dt>aarch64-monitor-2013-04.tar.bz2</dt>
+
+      <dd>This contains the source code and makefile for a simple example of a Trustzone Secure
+      Monitor program which can be used to switch between a Secure and Non-secure execution context
+      on an ARMv8 processor. The package also contains pre-built binaries of the example and a
+      script to aid running the example on the ARMv8 RTSM model.</dd>
+    </dl>
+    
+    <p>For installation requirements and instructions, please see the <a href="#installation">Installation</a>
+    details below.</p>
+
+    <h3><a name="functionality-included" id="functionality-included">Functionality
+    included</a></h3>
+
+    <p>This is reference code to illustrate how the ARM Security Extensions can be used in ARMv8 to
+    implement the EL3 Secure Monitor program in AArch64. It also provides a reference of
+    architecturally accurate CPU initialization, assuming only the minimal reset state documented
+    in the Architecture specification.</p>
+
+    <p>AArch64 no longer provides banked versions of the system and coprocessor register state for
+    Secure and Non-secure processor modes, thus the monitor program must now save and restore
+    additional processor state for the EL0 and EL1 context in order to provide an entirely
+    independent and secure domain for Trusted OS and applications.</p>
+
+    <p>This secure monitor program provides per-CPU context save and restore code for switching
+    between secure and non-secure domains in response to an <span class="mono">SMC</span> instruction, covering
+    all of the required architected processor register state. In this example the SMC call always
+    switches domain, and passes the <span class="mono">X0-X3</span> (AArch32 <span class="mono">R0-R3</span>) registers to
+    the 'other side' - a simple form of ABI. This is not essential for a monitor program but
+    illustrates one such possible ABI. This example also shows per-CPU lazy switching of the full
+    floating point/NEON register state between secure and non-secure domains.</p>
+
+    <p>The monitor program example does not include:</p>
+
+    <ul>
+      <li>management of interrupts and timers for the secure and non-secure domains, and trapping
+      interrupts for the non-current domain to the monitor</li>
+
+      <li>enabling the MMU and use of the non-secure EL1 and EL2 and secure EL1 and EL3 memory
+      translation systems - although all relevant MMU control registers are managed by the example
+      monitor</li>
+
+      <li>save and restore of implementation specific CPU state</li>
+
+      <li>save and restore of the full CPU state as required for CPU power management</li>
+    </ul>
+
+    <p>Unlike AArch32, AArch64 specifies only the minimal necessary requirements for processor
+    register state on reset. This example program also includes a full, correct initialization of
+    the architected CPU state required to run the example code. Note that not all CPU state is
+    initialized in this example code as not all CPU features are used, for example, the MMU and
+    caches are not currently used in the example code.</p>
+
+    <p>This example makes use of the modeling of secure and non-secure memory within the ARMv8
+    model (model parameter <span class="mono">daughterboard.secure_memory=true</span>). The model is strict:
+    secure memory can only accessed from secure state, non-secure memory can only be accessed from
+    non-secure state except when the NS or NSTable bits are used in a secure translation table. The
+    model's full memory map is described in the linker script <span class=
+    "mono">memory.lds</span>, which is then used by the other linker scripts in order to
+    define the load and run addresses for the programs in this example.</p>
+
+    <p>This example can run on multi-core models (up to 4 CPUs), in which case each CPU executes
+    precisely the same code, but uses a separate region of RAM for the CPU secure and non-secure
+    context. The <span class="mono">runexample.sh</span> script provided sets the number of
+    CPUs to one (model parameter <span class="mono">cluster_NUM_CORES=1</span>) as this makes observation of the
+    monitor program more obvious in the debugger.</p>
+
+    <p>The programs that are used for the secure and non-secure domains in this example are simple
+    loops that repeatedly invoke <span class="mono">SMC</span> to switch to the other domain. They make use of a
+    'shared' register <span class="mono">X0/R0</span> (based on the SMC ABI protocol in this example) and a
+    non-shared register <span class="mono">X4/R4</span>; and also occasionally use the floating point register
+    set. This provides a basic illustration of the context save and restore and the lazy nature of
+    the floating point context switch.</p>
+
+    <p>Both AArch64 and AArch32 versions of the secure and non-secure domain programs are provided.
+    The non-secure programs can be run either in hypervisor (EL2/hyp) or kernel (EL1/svc) modes.
+    The AArch32 programs can be compiled in either ARM or THUMB instruction set. The choice of
+    programs to use can be specified when running the example in the model debugger using the
+    provided <span class="mono">runexample.sh</span> script (see <a href="#usage">Usage</a>
+    below for more details).</p>
+
+    <p>It is also possible to use other programs for the secure and/or non-secure domains. The
+    programs need to start with a small data structure describing the code: this structure is
+    outlined at the start of <span class="mono">monitor.64.S</span> and can be seen in the
+    other assembler source files (e.g. <span class="mono">secure.64.S</span>). Note that
+    AArch32 THUMB entry point references must have bit 0 set in the conventional manner. The
+    programs also need to be linked to run and load at the correct addresses to work with the
+    supplied monitor program, refer to <span class="mono">secure.lds</span> and <span class=
+    "mono">non_secure.lds</span> for details of how this can be specified in conjunction with
+    <span class="mono">memory.lds</span>.</p>
+    
+    <h3><a name="new-features" id="new-features">New features</a></h3>
+
+    <ul>
+      <li>The software is now built using publicly available toolchains from Linaro for both AArch32 (ARM)
+       and AArch64 code.</li>
+    </ul>      
+      
+    <h3><a name="known-issues" id="known-issues">Known issues</a></h3>
+
+    <ul>
+      <li>The AArch32 GNU toolchains have only recently included support for the 
+      <span class="mono">VMRS Rn, FPEXC</span> instruction forms (from binutils 2.23.1). This example
+      code currently uses the explicit forms of <span class="mono">MRC</span> instructions to access 
+      this register allowing older toolchains to be used.</li>
+
+      <li style="list-style: none"><br /></li>
+
+      <li>Loading application code into the non-secure memory of the ARMv8 model at start-up is not
+      possible, as the CPU is in secure state and access to the non-secure memory map is not
+      permitted by the model core. To work-around this limitation but keep the example simple, a
+      small model script (see <span class="mono">runexample.sh</span>) is used to copy the
+      non-secure code from a secure-memory load address (in this case <span class="mono">0x7ff00000</span>) to
+      the non-secure memory run address (in this case <span class="mono">0x80000000</span>).<br />
+      <br />
+      A production system would use the MMU and a suitably configured page translation to map and
+      mark the non-secure memory in the secure page tables in order to load and copy the non-secure
+      OS/loader code into RAM.</li>
+    </ul>
+
+<!--
+    <h3><a name="issues-resolved" id="issues-resolved">Issues resolved since last release</a></h3>
+
+    <ul>
+      <li></li>
+    </ul>
+-->
+    
+    <h3><a name="test-cases" id="test-cases">Test cases and results</a></h3>
+
+    <p>No test cases as such are included with this example code. Operation of the monitor program
+    should be observed by tracing execution in the model debugger.</p>
+    
+    <p>Using the provided script (see <a href="#usage">Usage</a> below) and running the program,
+    execution should first halt at entry to the secure program (at address <span class="mono">7E000010</span>).
+    Running on, execution should next halt at entry to the non-secure program (at address 
+    <span class="mono">80000010</span>). After this the program will not break again unless additional breakpoints
+    are set.
+    
+    <p>Breaking into the program while it runs should show register <span class="mono">X0</span> incrementing 
+    (once for each switch from secure to non-secure or vice-versa), <span class="mono">X4</span> incrementing at 
+    half this rate in the secure program and <span class="mono">X4</span> decrementing in the non-secure program. 
+    The floating point registers will also hold different values in the secure and non secure 
+    programs.</p>    
+    
+    <p>The mode switching and lazy floating point context switching can be observed by instruction
+    stepping from the SMC and floating point instructions in the secure and non-secure programs
+    or by setting breakpoints on the monitor program <span class="mono">CPTR_trap</span> and <span class="mono">SMC_64</span> 
+    labels.</p>
+    
+    <p>Running the example results in some expected diagnostic output from the "Debug Engine" relating to 
+    failure to find an entry point. Details are provided in the <a href="#usage">Usage</a> section
+    below.</p>
+   
+<!--
+    <h3><a name="other-info" id="other-info">Other information</a></h3>
+-->
+  </div>
+
+  <div class="section">
+    <h2><a name="installation" id="installation">Installation</a></h2>
+
+    <h3><a name="requirements" id="requirements">Requirements</a></h3>
+
+    <dl>
+      <dt>This release has been build tested on the following Linux host environments:</dt>
+
+      <dd>Linux Ubuntu 10.04 (x86_64)</dd>
+      <dd>Linux Ubuntu 12.04 (x86_64)</dd>
+
+      <dt><br />
+      The code has been built with the <a href="https://launchpad.net/linaro-toolchain-binaries/+milestone/2013.03">Linaro 2013-03 GCC 4.7 toolchain releases</a>:</dt>
+
+      <dd>for AArch64 source: the 2013-03 bare-metal (<span class="mono">aarch64-none-elf-*</span>)
+      <a href="https://launchpad.net/linaro-toolchain-binaries/trunk/2013.03/+download/gcc-linaro-aarch64-none-elf-4.7-2013.03-20130313_linux.tar.bz2">
+      AArch64 GNU GCC-4.7 toolchain</a></dd>
+
+      <dd>for AArch32 source, the 2013-03 Linux (<span class="mono">arm-linux-gnueabihf-*</span>)<a href=
+      "https://launchpad.net/linaro-toolchain-binaries/trunk/2013.03/+download/gcc-linaro-arm-linux-gnueabihf-4.7-2013.03-20130313_linux.tar.bz2">
+      armhf GNU GCC-4.7 toolchain</a> from Linaro</dd>
+      
+      <dt>The software is all ARM assembler (A32/T32/A64 instructions) and should build successfully
+      with other toolchains supporting any ABI (bare-metal, linux, eabi, eabihf, etc).</dt>
+
+      <dt><br />
+      The code has been tested to run against the following models:</dt>
+
+      <dd>ARM RTSM_AEMv8 VE models v4.0-v4.7</dd>
+      <dt>The software does not work with the ARM Foundation v8 Models as these do not support loading multiple ELF applications.</dt>
+
+    </dl>
+
+    <h3><a name="installation-instructions" id="installation-instructions">Installation instructions</a></h3>
+
+		<p>Unpacking the tar file with the following command</p>
+		
+    <blockquote>
+      <span class="mono">tar -xjf aarch64-monitor-2013-04.tar.bz2</span>
+    </blockquote>
+
+		<p>will create a <span class="mono">./aarch64-monitor</span> directory which contains all of the
+		documentation, source files and pre-built binaries.</p>
+
+    <h3><a name="build-instructions" id="build-instructions">Build instructions</a></h3>
+
+    <p>Paths and prefixes for the AArch64 and AArch32 GNU toolchains must be set in the
+    <span class="mono">config</span> file. The <span class="mono">ARM_AARCH64_GNU_TOOLS</span> and
+    <span class="mono">ARM_AARCH32_GNU_TOOLS</span> variables must refer to the appropriate GNU tool chains such
+    that <span class="mono">$(ARM_AARCH32_GNU_TOOLS)gcc</span> would invoke the AArch32 GCC compiler and
+    likewise for the AArch64 toolchain.</p>
+    
+    <p>Optionally, the following config parameters can be modified as needed to match the platform:</p>
+
+    <dl class="manifest">
+      <dt>ARM_HAS_THUMB2EE</dt>
+
+      <dd>This parameter must indicate if ThumbEE is supported by the platform. The default
+      is zero ('not implemented') and should be set to one to include support for ThumbEE. This
+      config parameter also controls the visibility of ThumbEE support in the RTSM_VE_AEMv8A model 
+      when invoked via the <span class="mono">./runexample.sh</span> script.</dd>
+      
+      <dt>ARM_HAS_AARCH32_EL1</dt>
+      
+      <dd>This parameter must indicate if AArch32 is implemented at EL1 in the platform. The defaults
+      is one ('implemented') and should be set to zero to exclude support for AArch32 at EL1. This 
+      config parameter also controls the availability of AArch32 support at EL1 in the RTSM_VE_AEMv8A
+      model when invoked via the <span class="mono">./runexample.sh</span> script.</dd>
+    </dl>  
+    
+    <p>Then from the directory with the source code, the command</p>
+
+    <blockquote>
+      <span class="mono">make</span>
+    </blockquote>
+
+    <p>will build the AArch64 secure monitor program, and the AArch64 and AArch32 versions of the
+    secure and non-secure domain programs.</p>
+
+    <p>The AArch32 programs can be built in either the THUMB or ARM instruction set, this is
+    controlled in the example code by the <span class="mono">THUMB</span> macro passed to the compilation as
+    shown in the <span class="mono">Makefile</span>.</p>
+
+    <p>For a quick start, the binaries for all of the example programs are already included with
+    this package.</p>
+
+    <h3><a name="usage" id="usage">Usage</a></h3>
+
+    <p>Paths for the ARM ModelDebugger and RTSM AEMv8 model must be set in the <span class="mono">
+    config</span> file. Note that the RTSM model license file/server may have to be set in the
+    <span class="mono">config</span> file (variable <span class="mono">ARM_MODEL_LICENSE</span>) if
+    the license is not already provided in the shell environment variable <span class="mono">
+    ARMLMD_LICENSE_FILE</span>.
+    
+    Optionally the RTSM model license file/server can be set in the
+     file.</p>
+
+    <p>With the environment set up, invoking the example in the model can be done from the example
+    code directory using the <span class="mono">runexample.sh</span> script:</p>
+
+    <blockquote>
+      <span class="mono">./runexample.sh</span>
+    </blockquote>
+
+    <p>This will load the monitor program and the AArch64 secure and non-secure example programs
+    into the ARMv8 model, and then set breakpoints at the entry points to the secure and non-secure
+    domains. Stepping or running the code from this point will show the interaction between the
+    secure and non-secure programs via the monitor.</p>
+
+    <p>Note that when run, this example generates the following expected console output:</p>
+    
+    <blockquote>
+      <span class="mono">
+      terminal_0: Listening for serial connection on port 5000<br />
+      terminal_1: Listening for serial connection on port 5001<br />
+      terminal_2: Listening for serial connection on port 5002<br />
+      terminal_3: Listening for serial connection on port 5003<br />
+      INFO: mmc: no image file connected<br />
+      DebugEngine: SetPCToApplicationEntryPoint was unable to set PC. Could not find application entry point.<br />
+      DebugEngine: SetPCToApplicationEntryPoint was unable to set PC. Could not find application entry point.<br />
+      DebugEngine: SetPCToApplicationEntryPoint was unable to set PC. Could not find application entry point.<br />
+      </span>
+    </blockquote>
+
+    <p>The "unable to set PC" messages are a side-effect of using a model script to load the
+    three executables before setting the initial entry point manually.
+    The script explicitly sets the entry point once all the applications are loaded.</p>
+    
+    <p>The AArch32 versions of the secure and/or non-secure domain programs can be selected instead
+    of the default AArch64 programs using the <span class="mono">-s 32</span> and <span class="mono">-n 32</span> options to
+    <span class="mono">runexample.sh</span>. Note that running AArch32 programs requires that the
+    <span class="mono">ARM_HAS_AARCH32_EL1</span> option is set to one.</p>
+    
+    <p>For example:</p>
+
+    <blockquote>
+      <span class="mono">./runexample.sh -n 32</span>
+    </blockquote>
+
+    <p>will run the monitor example using the supplied AArch64 secure program and AArch32
+    non-secure program. Alternative secure or non-secure programs can also be specified by
+    providing the full name of the image file to the <span class="mono">-n</span> or 
+    <span class="mono">-s</span> options. E.g.
+
+    <blockquote>
+      <span class="mono">./runexample.sh -s my_secure_image.elf</span>
+    </blockquote>
+
+    <p>will run the monitor example using the supplied AArch64 non-secure program and a
+    user-provided secure program <span class="mono">my_secure_image.elf</span>. See <a href=
+    "#functionality-included">Functionality included</a> above about requirements on such a
+    program.</p>
+
+    <p>[Note that when secure memory is enabled in the model, breakpoints are specific to a
+    particular processor state, as seen in the <em>Memory Space</em> options in the various
+    debugger windows: <em>Secure Monitor</em> is required for breakpoints in the EL3 monitor
+    program, <em>Guest</em> can be used for breakpoints in secure or non-secure EL1/svc code and
+    <em>NS Hyp</em> is required for breakpoints in non-secure EL2/hypervisor code.]</p>
+  </div>
+
+<!--
+  <div class="section">
+    <h2><a name="tools" id="tools">Tools</a></h2>
+    
+    <p>TBD</p>
+  </div>
+
+  <div class="section">
+    <h2><a name="operating-systems" id="operating-systems">Operating systems</a></h2>
+
+    <p>Ubuntu 10.4 (x86_64).</p>
+  </div>
+-->
+
+  <div class="section">
+    <h2><a name="support" id="support">Support</a></h2>
+
+    <p>This release comes with no entitlement to support, to inform ARM about defect notifications, enhancement requests and other feedback, please contact us at <a href="mailto:support-sw@arm.com">support-sw@arm.com</a>.</p>
+  </div>
+</body>
+</html>

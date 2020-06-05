@@ -1,0 +1,85 @@
+{
+  "fields": [],
+  "actions": [
+    {
+      "name": "sell",
+      "description": "sell electrical energy action",
+      "parameters": [
+        {
+          "name": "sellAmount",
+          "type": "CUSTOM",
+          "valueClass": "Integer",
+          "unitSymbol": "mAh",
+          "metaData": [
+            {
+              "type": "MIN_VALUE_INTEGER",
+              "value": 0
+            },
+            {
+              "type": "MIN_VALUE_STRICT",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "sellPrice",
+          "type": "CUSTOM",
+          "valueClass": "Integer",
+          "unitSymbol": "EVTT",
+          "metaData": [
+            {
+              "type": "MIN_VALUE_INTEGER",
+              "value": 0
+            },
+            {
+              "type": "MIN_VALUE_STRICT",
+              "value": false
+            }
+          ]
+        }
+      ],
+      "isStandard": false,
+      "type": "CUSTOM"
+    },
+    {
+      "name": "buy",
+      "description": "buy electric energy action",
+      "parameters": [
+        {
+          "name": "sellerNum",
+          "type": "CUSTOM",
+          "valueClass": "Integer",
+          "metaData": [
+            {
+              "type": "MIN_VALUE_INTEGER",
+              "value": 0
+            },
+            {
+              "type": "MIN_VALUE_STRICT",
+              "value": false
+            }
+          ]
+        },
+        {
+          "name": "sellAmount",
+          "type": "CUSTOM",
+          "valueClass": "Integer",
+          "unitSymbol": "mAh",
+          "metaData": [
+            {
+              "type": "MIN_VALUE_INTEGER",
+              "value": 0
+            },
+            {
+              "type": "MIN_VALUE_STRICT",
+              "value": false
+            }
+          ]
+        }
+      ],
+      "isStandard": false,
+      "type": "CUSTOM"
+    }
+  ],
+  "messageFormat": "json"
+}

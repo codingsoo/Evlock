@@ -1,0 +1,36 @@
+# Environment required to build and/or run the Secure Monitor example code
+#
+# Set these variables to refer to the installed location of the required
+# tools and models used in conjunction with this example
+#
+
+# Paths and prefixes for the AArch64 and AArch32 GNU toolchains used to
+# build the example code. If the cross-compilers are already on the path
+# these variables just need to be the toolchain prefix
+#
+# These are used when building the example code using make
+
+ARM_AARCH64_GNU_TOOLS=/opt/gcc-linaro-aarch64-none-elf-4.7-2013.03-20130313_linux/bin/aarch64-none-elf-
+ARM_AARCH32_GNU_TOOLS=/opt/gcc-linaro-arm-linux-gnueabihf-4.7-2013.03-20130313_linux/bin/arm-linux-gnueabihf-
+
+# Configuration for hardware characteristics that control whether the monitor manages
+# certain registers that are UNDEFINED for some implementations
+
+# 1 if AArch32 is implemented at EL1, 0 if it is not
+ARM_HAS_AARCH32_EL1=1
+
+# 1 if Thumb2EE is implemented, 0 if it is not
+ARM_HAS_THUMB2EE=0
+
+
+# Paths to the ARM ModelDebugger and the ARMv8 RTSM_VE_AEMv8A.so model
+#
+# These are used when running the example code using runexample.sh
+
+ARM_MODELDEBUGGER=/opt/RTSM_AEMv8_VE/bin
+ARM_AEMv8=/opt/RTSM_AEMv8_VE/models/Linux64_GCC-4.1
+
+# Path to the Model License file/server. This overrides any ARMLMD_LICENSE_FILE
+# environment variable when using runexample.sh
+
+#ARM_MODEL_LICENSE="<path-to-license-file>"
